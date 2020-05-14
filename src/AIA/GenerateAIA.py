@@ -16,7 +16,7 @@ def convertJson(originalJson):
 
 
 def saveFile(project: AIAProject.Project):
-    savePath = './Result/' + project.AppName + '.aia'
+    savePath = '/home/dsbaule/PycharmProjects/Sketch2AIA/src/AIA/Result/' + project.AppName + '.aia'
 
     with ZipFile(savePath, 'x') as myzip:
         with myzip.open("youngandroidproject/project.properties", 'w') as project_properties_file:

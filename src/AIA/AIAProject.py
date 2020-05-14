@@ -10,6 +10,36 @@ class Project:
         self.main = None
         self.Screens = list()
 
+        self.countDict = {
+            'VerticalArrangement':      1,
+            'HorizontalArrangement':    1,
+            'Label':        1,
+            'Button':       1,
+            'TextBox':      1,
+            'CheckBox':     1,
+            'Image':        1,
+            'Switch':       1,
+            'Slider':       1,
+            'Map':          1,
+            'ListPicker':   1,
+            'Spinner':      1
+        }
+
+        self.defaultNames = {
+            'VerticalArrangement':      'OrganizacaoVertical',
+            'HorizontalArrangement':    'OrganizacaoHorizontal',
+            'Label':        'Legenda',
+            'Button':       'Botao',
+            'TextBox':      'CaixaDeTexto',
+            'CheckBox':     'CaixaDeSelecao',
+            'Image':        'Imagem',
+            'Switch':       'Interruptor',
+            'Slider':       'Deslizador',
+            'Map':          'Mapa',
+            'ListPicker':   'EscolheLista',
+            'Spinner':      'ListaSuspensa'
+        }
+
     def addScreen(self, screen):
         if self.main is None:
             self.main = screen.Name

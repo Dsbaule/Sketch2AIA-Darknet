@@ -11,7 +11,7 @@ def align(componentList, vertical = True):
         componentList.sort(key=lambda x: x.x1)
 
     # While componentList is not empty
-    #print(str(len(componentList)) + str(componentList))
+    # print(str(len(componentList)) + str(componentList))
     while componentList:
         # Pop first component
         curComponent = componentList.pop(0)
