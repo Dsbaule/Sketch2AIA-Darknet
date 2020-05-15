@@ -1,5 +1,5 @@
 classes=10
-train=../Custom_Darknet_Files/train.txt
-valid=../Custom_Darknet_Files/val.txt
-names=../Custom_Darknet_Files/obj.names
-backup=../Custom_Darknet_Files/backup
+train=/home/dsbaule/PycharmProjects/Sketch2AIA/Custom_Darknet_Files/train.txt
+valid=/home/dsbaule/PycharmProjects/Sketch2AIA/Custom_Darknet_Files/val.txt
+names=/home/dsbaule/PycharmProjects/Sketch2AIA/Custom_Darknet_Files/obj.names
+backup=/home/dsbaule/PycharmProjects/Sketch2AIA/Custom_Darknet_Files/backup

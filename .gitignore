@@ -46,12 +46,12 @@ Thumbs.db
 .vscode/
 
 # Managed by CMake
-src/version.h
+darknet/src/version.h
 
 # Build artifacts
-lib/
-share/
-include/darknet/
-uselib
-uselib_track
-darknet
+darknet/lib/
+darknet/share/
+darknet/include/darknet/
+darknet/uselib
+darknet/uselib_track
+darknet/darknet

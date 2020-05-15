@@ -4,7 +4,7 @@ from src import Alignment
 from src.AIA import AIAProject, GenerateAIA
 
 result = darknet.performDetect(
-    imagePath="/home/dsbaule/PycharmProjects/Sketch2AIA/Custom_Darknet_Files/TestImg/NewLoginInterfaceScan.jpg",
+    imagePath="/home/dsbaule/PycharmProjects/Sketch2AIA/Custom_Darknet_Files/TestImg/sample3.jpg",
     thresh=0.25,
     configPath="/home/dsbaule/PycharmProjects/Sketch2AIA/Custom_Darknet_Files/NewDatasetYolov3.cfg",
     weightPath="/home/dsbaule/PycharmProjects/Sketch2AIA/Custom_Darknet_Files/NewDatasetYolov3_18000.weights",
@@ -53,7 +53,7 @@ def generateArrangement(alignment: tuple, curProj: AIAProject.Project, depth=0) 
 
     (alignment, components) = alignment
     if alignment == 'vertical':
-        curArrangement = AIAProject.VerticalArrangement(Name=(defaultNames['VerticalArrangement'] + str(countDict['VerticalArrangement'])), Height=(-2 if depth is 0 else -1))
+        curArrangement = AIAProject.VerticalArrangement(Name=(defaultNames['VerticalArrangement'] + str(countDict['VerticalArrangement'])), Height=(-2 if depth is 0 else -1), Width=(-2 if depth is 0 else -1), AlignHorizontal=(3 if depth is 0 else 1),)
         countDict['VerticalArrangement'] += 1
     elif alignment == 'horizontal':
         curArrangement = AIAProject.HorizontalArrangement(Name=(defaultNames['HorizontalArrangement'] + str(countDict['HorizontalArrangement'])))
@@ -89,7 +89,7 @@ def generateArrangement(alignment: tuple, curProj: AIAProject.Project, depth=0) 
 
 alignedComponents = Alignment.align(componentList)
 
-project = AIAProject.Project(AppName='TestGeneration')
+project = AIAProject.Project(AppName='Sample3aia')
 screen = AIAProject.Screen('Screen1', project)
 project.addScreen(screen)
 
